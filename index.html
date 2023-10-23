@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>Provisionamento das ONUs</title>
+</head>
+
+<body>
+    <img src="images/logo.png">
+
+    <form id="ordemServico">
+
+        <div class="dashboard">
+            <div class="section section1">
+
+                <label for="titulo" class="label">Base:</label>
+                <select id=base class="box">
+                    <option value="WLAN">WLAN</option>
+                </select>
+                <br>
+                <label for="olt" class="label">OLT:</label>
+                <select id=olt class="box">
+                    <option value="HUAWEI">HUAWEI</option>
+                </select>
+                <br>
+                <label for="olt" class="label">REGIÃO:</label>
+                <select id=olt2 class="box">
+                    <option value=""></option>
+                    <option value="DISTRITO">DISTRITO</option>
+                    <option value="ICOARACI">ICOARACI</option>
+                    <option value="CIDADE NOVA">CIDADE NOVA</option>
+                </select>
+                <br>
+                <label for="lineProfile" class="lineProfile">Line Profile:</label>
+                <select id=lineProfile class="box">
+                    <option value=""></option>
+                    <option value="ROUTER">ROUTER</option>
+                    <option value="BRIDGE">BRIDGE</option>
+                </select>
+                <br>
+
+                <label for="placa">Nº da Placa:</label>
+                <input type="text" id="placa" class="box" name="nOnu" placeholder="Informe o Nº da placa x/x">
+                <br>
+
+                <label for="ramo">Ramo:</label>
+                <input type="text" class="box" id="ramo" name="ramo" placeholder="Informe o Ramo da PON:"> <br>
+
+
+                <label for="nOnu">Nº da ONU:</label>
+                <input type="text" id="nOnu" class="box" name="nOnu" placeholder="Informe a ID da ONU:">
+                <br>
+
+                <label for="nome">Nome do Cliente:</label>
+                <input type="text" id="nome" class="box" name="nome" placeholder="Informe o Nome do Cliente:">
+                <br>
+
+                <label for="serial">Serial da ONU:</label>
+                <input type="text" class="box" id="serial" name="serial" placeholder="Informe Nº do Serial" required>
+                <br>
+
+                <label for="servicePort1">Service Port 1:</label>
+                <input type="text" class="box" id="servicePort1" name="servicePort1"
+                    placeholder="Informe o Nº do Service Port 1"> <br>
+
+                <label for="servicePort2">Service Port 2:</label>
+                <input type="text" class="box" id="servicePort2" name="servicePort2"
+                    placeholder="Informe o Nº do Service Port 2"> <br>
+
+
+                <label for="vlan" id="lvlan">VLAN ID:</label>
+                <input type="text" class="box" id="vlan" name="vlan" placeholder="0000" maxlength="4" required> <br>
+
+            </div>
+            <div class="section section2">
+
+                <div class="container">
+                    <div class="center">
+                        <button type="submit" class="button" id="btn-enviar">
+                            <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                                <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+                                <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+                            </svg>
+                            <span><b>Enviar</b></span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="section section3">
+
+                    <p>Resultados:</p>
+
+                    <span>=================================</span>
+                    <ul id="resultados"></ul>
+                    <span>=================================</span>
+
+                    <div class="container2">
+                        <div class="center">
+                            <button type="submit" class="button" id="btn-copiar">
+                                <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                                    <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+                                    <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+                                </svg>
+                                <span><b>Copiar os Dados</b></span>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                <span><b>Desenvolvido por Carlos Mozart</b></span>
+    </form>
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
