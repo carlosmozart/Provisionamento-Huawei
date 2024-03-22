@@ -18,7 +18,7 @@
             <div class="section section1">
 
                 <label for="titulo" class="label">Base:</label>
-                <select id=base class="box">
+                <select id=base class="box" required>
                     <option value="WLAN">WLAN</option>
                 </select>
                 <br>
@@ -29,10 +29,8 @@
                 <br>
                 <label for="olt" class="label">REGIÃO:</label>
                 <select id=olt2 class="box">
-                    <option value=""></option>
-                    <option value="DISTRITO">DISTRITO</option>
-                    <option value="ICOARACI">ICOARACI</option>
-                    <option value="CIDADE NOVA">CIDADE NOVA</option>
+                    <option value="WLAN">WLAN</option>
+
                 </select>
                 <br>
                 <label for="lineProfile" class="lineProfile">Line Profile:</label>
@@ -44,11 +42,11 @@
                 <br>
 
                 <label for="placa">Nº da Placa:</label>
-                <input type="text" id="placa" class="box" name="nOnu" placeholder="Informe o Nº da placa x/x">
+                <input type="text" id="placa" class="box" name="nOnu" placeholder="Informe o Nº da placa x/x" required>
                 <br>
 
                 <label for="ramo">Ramo:</label>
-                <input type="text" class="box" id="ramo" name="ramo" placeholder="Informe o Ramo da PON:"> <br>
+                <input type="text" class="box" id="ramo" name="ramo" placeholder="Informe o Ramo da PON:" required> <br>
 
 
                 <label for="nOnu">Nº da ONU:</label>
@@ -56,7 +54,7 @@
                 <br>
 
                 <label for="nome">Nome do Cliente:</label>
-                <input type="text" id="nome" class="box" name="nome" placeholder="Informe o Nome do Cliente:">
+                <input type="text" id="nome" class="box" name="nome" placeholder="Informe o Nome do Cliente:" required>
                 <br>
 
                 <label for="serial">Serial da ONU:</label>
