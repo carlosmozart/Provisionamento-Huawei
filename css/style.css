@@ -9,7 +9,7 @@
 body {
   text-align: center;
   background: linear-gradient(to bottom, #ffa500, #fff);
-  min-height: 100vh;
+  min-height: 110vh;
   font-family: 'Oxanium', cursive;
 }
 
@@ -113,4 +113,15 @@ label {
   border-radius: 10px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
   text-align: center;
+}
+
+svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+  stroke: #fff;
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: 1s ease-in-out;
 }
