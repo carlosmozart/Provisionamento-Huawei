@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-
     <title>Provisionamento das ONUs</title>
 </head>
 
@@ -14,68 +13,84 @@
 
     <form id="ordemServico">
 
+        <!-- Dashboard -->
         <div class="dashboard">
             <div class="section section1">
 
-                <label for="titulo" class="label">Base:</label>
-                <select id=base class="box" required>
+                <!-- Seleção da Base -->
+                <label for="base" class="label">Base:</label>
+                <select id="base" class="box" required>
                     <option value="WLAN">WLAN</option>
                 </select>
                 <br>
+
+                <!-- Seleção da OLT -->
                 <label for="olt" class="label">OLT:</label>
-                <select id=olt class="box">
+                <select id="olt" class="box">
                     <option value="HUAWEI">HUAWEI</option>
                 </select>
                 <br>
-                <label for="olt" class="label">REGIÃO:</label>
-                <select id=olt2 class="box">
-                    <option value="WLAN">WLAN</option>
 
+                <!-- Seleção da Região -->
+                <label for="olt2" class="label">REGIÃO:</label>
+                <select id="olt2" class="box">
+                    <option value="WLAN">WLAN</option>
                 </select>
                 <br>
-                <label for="lineProfile" class="lineProfile">Line Profile:</label>
-                <select id=lineProfile class="box">
+
+                <!-- Seleção do Line Profile -->
+                <label for="lineProfile" class="label">Line Profile:</label>
+                <select id="lineProfile" class="box">
                     <option value=""></option>
                     <option value="ROUTER">ROUTER</option>
                     <option value="BRIDGE">BRIDGE</option>
                 </select>
                 <br>
 
+                <!-- Número da Placa -->
                 <label for="placa">Nº da Placa:</label>
                 <input type="text" id="placa" class="box" name="nOnu" placeholder="Informe o Nº da placa x/x" required>
                 <br>
 
+                <!-- Ramo -->
                 <label for="ramo">Ramo:</label>
-                <input type="text" class="box" id="ramo" name="ramo" placeholder="Informe o Ramo da PON:" required> <br>
+                <input type="text" id="ramo" class="box" name="ramo" placeholder="Informe o Ramo da PON:" required>
+                <br>
 
-
+                <!-- Número da ONU -->
                 <label for="nOnu">Nº da ONU:</label>
                 <input type="text" id="nOnu" class="box" name="nOnu" placeholder="Informe a ID da ONU:">
                 <br>
 
+                <!-- Nome do Cliente -->
                 <label for="nome">Nome do Cliente:</label>
                 <input type="text" id="nome" class="box" name="nome" placeholder="Informe o Nome do Cliente:" required>
                 <br>
 
+                <!-- Serial da ONU -->
                 <label for="serial">Serial da ONU:</label>
-                <input type="text" class="box" id="serial" name="serial" placeholder="Informe Nº do Serial" required>
+                <input type="text" id="serial" class="box" name="serial" placeholder="Informe Nº do Serial" required>
                 <br>
 
+                <!-- Service Port 1 -->
                 <label for="servicePort1">Service Port 1:</label>
-                <input type="text" class="box" id="servicePort1" name="servicePort1"
-                    placeholder="Informe o Nº do Service Port 1"> <br>
+                <input type="text" id="servicePort1" class="box" name="servicePort1" placeholder="Informe o Nº do Service Port 1">
+                <br>
 
+                <!-- Service Port 2 -->
                 <label for="servicePort2">Service Port 2:</label>
-                <input type="text" class="box" id="servicePort2" name="servicePort2"
-                    placeholder="Informe o Nº do Service Port 2"> <br>
+                <input type="text" id="servicePort2" class="box" name="servicePort2" placeholder="Informe o Nº do Service Port 2">
+                <br>
 
-
+                <!-- VLAN ID -->
                 <label for="vlan" id="lvlan">VLAN ID:</label>
-                <input type="text" class="box" id="vlan" name="vlan" placeholder="0000" maxlength="4" required> <br>
+                <input type="text" id="vlan" class="box" name="vlan" placeholder="0000" maxlength="4" required>
+                <br>
 
             </div>
-            <div class="section section2">
 
+            <div class="section section2">
+                <!-- Botão Enviar -->
                 <div class="container">
                     <div class="center">
                         <button type="submit" class="button" id="btn-enviar">
@@ -88,30 +103,33 @@
                     </div>
                 </div>
 
+                <!-- Resultados -->
                 <div class="section section3">
-
                     <p>Resultados:</p>
-
                     <span>=================================</span>
                     <ul id="resultados"></ul>
                     <span>=================================</span>
+                </div>
 
-                    <div class="container2">
-                        <div class="center">
-                            <button type="submit" class="button" id="btn-copiar">
-                                <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
-                                    <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
-                                    <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
-                                </svg>
-                                <span><b>Copiar os Dados</b></span>
-                            </button>
-                        </div>
-
+                <!-- Botão Copiar Dados -->
+                <div class="container2">
+                    <div class="center">
+                        <button type="submit" class="button" id="btn-copiar">
+                            <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                                <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+                                <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+                            </svg>
+                            <span><b>Copiar os Dados</b></span>
+                        </button>
                     </div>
                 </div>
-                <span><b>Desenvolvido por Carlos Mozart</b></span>
+            </div>
+        </div>
     </form>
-    </div>
+
+    <footer>
+        <span><b>Desenvolvido por Carlos Mozart</b></span>
+    </footer>
 
     <script src="./js/script.js"></script>
 </body>
