@@ -74,12 +74,14 @@
 
                 <!-- Service Port 1 -->
                 <label for="servicePort1">Service Port 1:</label>
-                <input type="text" id="servicePort1" class="box" name="servicePort1" placeholder="Informe o Nº do Service Port 1">
+                <input type="text" id="servicePort1" class="box" name="servicePort1"
+                    placeholder="Informe o Nº do Service Port 1">
                 <br>
 
                 <!-- Service Port 2 -->
                 <label for="servicePort2">Service Port 2:</label>
-                <input type="text" id="servicePort2" class="box" name="servicePort2" placeholder="Informe o Nº do Service Port 2">
+                <input type="text" id="servicePort2" class="box" name="servicePort2"
+                    placeholder="Informe o Nº do Service Port 2">
                 <br>
 
                 <!-- VLAN ID -->
@@ -88,49 +90,27 @@
                 <br>
 
             </div>
-
+            <!-- Resultados -->
             <div class="section section2">
-                <!-- Botão Enviar -->
-                <div class="container">
-                    <div class="center">
-                        <button type="submit" class="button" id="btn-enviar">
-                            <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
-                                <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
-                                <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
-                            </svg>
-                            <span><b>Enviar</b></span>
-                        </button>
-                    </div>
-                </div>
-
-                <!-- Resultados -->
-                <div class="section section3">
-                    <p>Resultados:</p>
-                    <span>=================================</span>
-                    <ul id="resultados"></ul>
-                    <span>=================================</span>
-                </div>
-
-                <!-- Botão Copiar Dados -->
-                <div class="container2">
-                    <div class="center">
-                        <button type="submit" class="button" id="btn-copiar">
-                            <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
-                                <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
-                                <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
-                            </svg>
-                            <span><b>Copiar os Dados</b></span>
-                        </button>
-                    </div>
-                </div>
+                <p>Resultados:</p>
+                <span>=================================</span>
+                <ul id="resultados"></ul>
+                <span>=================================</span>
+                <br>
+            <!-- Botões -->
+                <button type="submit" class="button" id="btn-enviar">
+                    <span><b>Enviar</b></span>
+                </button>
+                <button type="submit" class="button" id="btn-copiar">
+                    <span><b>Copiar os Dados</b></span>
+                </button>
             </div>
         </div>
+        
     </form>
-
     <footer>
         <span><b>Desenvolvido por Carlos Mozart</b></span>
     </footer>
-
     <script src="./js/script.js"></script>
 </body>
 
