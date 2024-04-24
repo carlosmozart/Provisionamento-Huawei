@@ -47,27 +47,34 @@ textarea {
   height: 100px;
 }
 
-.container,
-.container2 {
-  width: 100px;
+.container {
   height: 100px;
-  position: absolute;
+  position: relative;
   top: 97%;
   transform: translateX(-50%);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
-.container2 {
-  left: 85%;
+
+.container {
+  width: calc(50% - 10px); 
 }
 
-.center {
-  width: 180px;
-  height: 60px;
-  position: relative;
+.container2 {
+  width: calc(50% - 10px); 
 }
+
+@media screen and (max-width: 768px) {
+  .container{
+    width: 100%; 
+  }
+}
+
+
+
+
 
 .button {
   width: 180px;
@@ -78,7 +85,7 @@ textarea {
   outline: none;
   transition: 1s ease-in-out;
   border-radius: 10px;
-  top: 90;
+  
 }
 
 .button:hover {
