@@ -85,3 +85,13 @@ class GetValores {
 window.addEventListener('load', () => {
     const minhaInstancia = new GetValores();
 });
+
+// Alterna o modo escuro
+document.getElementById('toggleDarkMode').addEventListener('click', function() {
+    document.body.classList.toggle('dark-mode');
+    document.querySelectorAll('.container, .label, .box, .descricao, .geo, .button')
+        .forEach(element => element.classList.toggle('dark-mode'));
+    
+    const isDarkMode = document.body.classList.contains('dark-mode');
+    localStorage.setItem('darkMode', isDarkMode ? 'enabled' : 'disabled');
+});
