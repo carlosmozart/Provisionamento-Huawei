@@ -34,11 +34,11 @@ class GetValores {
                     `conf`,
                     `interface gpon ${placa}`,
                     `ont add ${ramo} sn-auth ${serial} omci ont-lineprofile-id 2440 ont-srvprofile-id 2440 desc "${nome}"`,
-                    `ont ipconfig ${ramo} ${nOnu} ip-index 1 dhcp vlan 110 priority 5`,
+                    `ont ipconfig ${ramo} ${nOnu} ip-index 1 dhcp vlan 111 priority 5`,
                     `ont tr069-server-config ${ramo} ${nOnu} profile-id 30`,
                     `quit`,
                     `service-port vlan ${vlan} gpon ${placa}/${ramo} ont ${nOnu} gemport 126 multi-service user-vlan ${vlan} tag-transform translate`,
-                    `service-port vlan 110 gpon ${placa}/${ramo} ont ${nOnu} gemport 126 multi-service user-vlan 110 tag-transform translate`
+                    `service-port vlan 111 gpon ${placa}/${ramo} ont ${nOnu} gemport 126 multi-service user-vlan 111 tag-transform translate`
                 ]);
             } else if (lineProfile === 'BRIDGE') {
                 this.adicionarLista([
@@ -48,7 +48,7 @@ class GetValores {
                     `ont port native-vlan ${ramo} ${nOnu} eth 1 vlan ${vlan} priority 0`,
                     `ont tr069-server-config ${ramo} ${nOnu} profile-id 30`,
                     `quit`,
-                    `service-port vlan 110 gpon ${placa}/${ramo} ont ${nOnu} gemport 126 multi-service user-vlan 110 tag-transform translate`,
+                    `service-port vlan 111 gpon ${placa}/${ramo} ont ${nOnu} gemport 126 multi-service user-vlan 111 tag-transform translate`,
                     `service-port vlan ${vlan} gpon ${placa}/${ramo} ont ${nOnu} gemport 126 multi-service user-vlan ${vlan} tag-transform translate`
                 ]);
             }
